@@ -12,6 +12,7 @@ import { CotnextapiHome } from './Components/contextApi/CotnextapiHome';
 import { Outlet } from "react-router-dom";
 import { ReactConcept } from './Components/Higher order fun/ReactConcept';  
 import ClassBased from './Components/Class Component/ClassBased';
+import { Form } from './Components/Form/Form';
 
 //not goes in infinite loop
 const App = () => {
@@ -59,6 +60,12 @@ const Home = () => {
         >
          Class Component
         </NavLink>
+        <NavLink
+          to="/form"
+          style={{paddingLeft:"15px",color:"white","textDecoration":"none"}}
+        >
+         Forms
+        </NavLink>
       </div>
 
       <div style={{padding:"30px"}}>
@@ -88,6 +95,10 @@ const router = createBrowserRouter([
       {
         path: "/class-component",
         element: <ClassBased/>,
+      },
+      {
+        path: "/form",
+        element: <Form/>,
       },
     ],
   },
